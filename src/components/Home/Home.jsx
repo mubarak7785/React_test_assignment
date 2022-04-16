@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { Navbar } from "../Navbar/Navbar"
+import { useDispatch,useSelector} from "react-redux"
 
 export const Home=()=>{
 
@@ -12,10 +13,11 @@ export const Home=()=>{
     })
 
     const getdata=()=>{
-        fetch("http://localhost:3001/add-city").then(Response=>Response.json()).then(data=>setResdata(data))  
+        fetch("http://localhost:3001/add-city").then(Response=>Response.json()).then(data=>dispatch({type:"CITY_DATA",payload:data}))  
        
     }
-
+const dispatch=useDispatch();
+const cdata=useSelector(store=>store.citydata);
     return <div>
        <Navbar/>
        <div>
@@ -31,7 +33,7 @@ export const Home=()=>{
                    </tr>
                </thead>
                <tbody>
-                   {resdata.map((elem)=>{
+                   {cdata.map((elem)=>{
                        return(
                            <tr>
                                <td>{elem.id}</td>
