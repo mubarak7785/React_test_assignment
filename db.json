@@ -3,7 +3,7 @@
     {
       "country": "india",
       "city": "Mumbai",
-      "population": "200000",
+      "population": "120000",
       "id": 1
     },
     {
@@ -17,12 +17,6 @@
       "city": "Chicago",
       "population": "100000",
       "id": 3
-    },
-    {
-      "country": "india",
-      "city": "Belgaum",
-      "population": "220000",
-      "id": 4
     }
   ]
 }

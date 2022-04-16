@@ -1,8 +1,9 @@
 import { useState } from "react"
-
-export const Addcity=()=>{
+import { useNavigate, useParams } from "react-router-dom"
+export const Editcity=()=>{
+    const {id}=useParams();
     const [formdata,setFormdata]=useState({})
-
+    const navigate=useNavigate();
 
 const handleChange=(e)=>{
     const {id,value}=e.target;
@@ -10,12 +11,12 @@ const handleChange=(e)=>{
 }
 
 const senddata=()=>{
-    fetch("http://localhost:3001/add-city",{
-        method :"POST",
+    fetch(`http://localhost:3001/add-city/${id}`,{
+        method :"PATCH",
         body:JSON.stringify(formdata),
         headers :{"content-type":"application/json"}
-    })
-    alert("Data Added")
+    }).then(alert("City Dtails Edited")).then(navigate("/"))
+    
 }
     return <div>
         <div className="city_data">
