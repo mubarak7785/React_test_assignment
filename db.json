@@ -1,0 +1,28 @@
+{
+  "add-city": [
+    {
+      "country": "india",
+      "city": "Mumbai",
+      "population": "200000",
+      "id": 1
+    },
+    {
+      "country": "shrilanka",
+      "city": "colombo",
+      "population": "20000",
+      "id": 2
+    },
+    {
+      "country": "USA",
+      "city": "Chicago",
+      "population": "100000",
+      "id": 3
+    },
+    {
+      "country": "india",
+      "city": "Belgaum",
+      "population": "220000",
+      "id": 4
+    }
+  ]
+}
